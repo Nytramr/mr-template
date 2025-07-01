@@ -1,0 +1,14 @@
+.github/
+.vscode/
+docs/
+playground/
+private/
+src/
+.babelrc
+.nvmrc
+.prettierrc
+jest.*.js
+rollup.*.js
+
+# Files to include
+!dist/*

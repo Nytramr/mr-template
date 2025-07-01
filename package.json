@@ -1,0 +1,42 @@
+{
+  "name": "@nytramr/mr-template",
+  "version": "0.0.1",
+  "main": "./dist/bundle.cjs",
+  "exports": {
+    ".": {
+      "require": "./dist/bundle.cjs",
+      "import": "./dist/bundle.mjs"
+    }
+  },
+  "private": false,
+  "scripts": {
+    "build": "npm run clean && npx rollup -c rollup.config.js",
+    "build:dev": "npm run clean && npx rollup -c rollup.config.js --config_build_env dev",
+    "clean": "rm -rf ./dist",
+    "publish:local": "npm run build:dev && npm pack --pack-destination ./packs",
+    "start": "npx http-server --cors -a localhost -p 5500 -S -C ./cert/CA/localhost/localhost.crt -K ./cert/CA/localhost/localhost.decrypted.key ./playground",
+    "start:http": "npx http-server --cors -a localhost -p 5500 ./playground",
+    "test": "npx jest --config jest.config.js --",
+    "test:watch": "npx jest --config jest.config.js --watch"
+  },
+  "author": "Martin Rubinsztein (martin.rubinsztein@gmail.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Nytramr/mr-template.git"
+  },
+  "license": "MIT",
+  "description": "Javascript implementation of GoLang templates package",
+  "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@types/jest": "^29.5.14",
+    "babel-jest": "^29.7.0",
+    "http-server": "^14.1.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "rollup": "^4.37.0"
+  }
+}
