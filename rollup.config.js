@@ -28,13 +28,19 @@ module.exports = (args) => {
           format: 'es',
           sourcemap: miniFile,
         },
+        {
+          file: 'dist/mr-template.js',
+          format: 'iife',
+          name: 'mrTemplate',
+          sourcemap: miniFile,
+        },
       ],
       plugins,
     },
     {
       input: 'src/index.js',
       output: {
-        file: 'playground/js/bundle/mr-template.js',
+        file: 'gh-pages/playground/js/bundle/mr-template.js',
         format: 'iife',
         name: 'mrTemplate',
         sourcemap: miniFile,

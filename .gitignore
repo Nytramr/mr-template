@@ -3,7 +3,7 @@ dist/
 
 .DS_Store
 
-playground/js/bundle/
 private/
 cert
 packs/
+gh-pages/playground/js/bundle/

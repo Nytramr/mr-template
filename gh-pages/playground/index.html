@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mr Render - Playground</title>
+    <link href="./css/playground.css" rel="stylesheet" />
+    <script src="./js/bundle/mr-template.js" type="text/javascript"></script>
+    <script src="./js/init-sw.js" type="text/javascript"></script>
+    <script src="./js/mr-elements.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <section id="playground">
+      <header id="playground-header">
+        <h1>Mr Render - Playground</h1>
+        <div id="template-tools" class="tools">
+          <input type="text" id="template-id" hidden />
+          <input
+            type="text"
+            id="template-name"
+            placeholder="Template Name"
+            value="Template 1"
+          />
+          <button id="save-template">Save</button>
+          <button id="load-template">Load</button>
+        </div>
+      </header>
+      <section id="data" class="code-editor vertical">
+        <div class="code-container">
+          <pre id="data-code" contenteditable="plaintext-only">
+[{"name": "Aunt Mildred", "gift": "bone china tea set", "attended": true}, {"name": "Uncle John", "gift": "moleskin pants", "attended":false}, {"name": "Cousin Rodney", "gift": "", "attended": false}]</pre
+          >
+        </div>
+        <button id="format-data">Format</button>
+      </section>
+      <section id="template" class="code-editor">
+        <mr-template-editor
+          id="template-code"
+          text="{{range .}}&#10;Dear {{.name}},&#10;{{if .attended}}&#10;It was a pleasure to see you at the wedding.&#10;{{- else}}&#10;It is a shame you couldn't make it to the wedding.&#10;{{- end}}&#10;{{with .gift -}}&#10;Thank you for the lovely {{.}}.&#10;{{end}}&#10;Best wishes,&#10;Josie&#10;&#10;-----------&#10;{{end}}"
+        ></mr-template-editor>
+        <div id="template-actions" class="tools">
+          <button
+            class="insert-action"
+            data-before="{{if condition}}"
+            data-after="{{end}}"
+            id="insert-if"
+          >
+            if / end
+          </button>
+          <button
+            class="insert-action"
+            data-before="{{else if condition}}"
+            id="insert-else-if"
+          >
+            else if
+          </button>
+          <button
+            class="insert-action"
+            data-before="{{with data}}"
+            data-after="{{end}}"
+            id="insert-with"
+          >
+            with / end
+          </button>
+          <button
+            class="insert-action"
+            data-before="{{else with data}}"
+            id="insert-else-with"
+          >
+            else with
+          </button>
+          <button
+            class="insert-action"
+            data-before="{{range slice}}"
+            data-after="{{end}}"
+            id="insert-range"
+          >
+            range / end
+          </button>
+          <button class="insert-action" data-before="{{else}}" id="insert-else">
+            else
+          </button>
+        </div>
+      </section>
+      <section id="render" class="code-editor">
+        <div class="code-container">
+          <pre id="render-code"></pre>
+        </div>
+      </section>
+      <section id="template-messages" class="code-editor">
+        <code id="template-errors" class="errors"></code>
+      </section>
+    </section>
+    <dialog id="load-template-dialog">
+      <form method="dialog" id="load-template-form">
+        <h2>Load Template</h2>
+        <ul id="saved-templates-list">
+          <!-- Templates will be populated here -->
+        </ul>
+        <menu>
+          <button value="cancel">Cancel</button>
+        </menu>
+      </form>
+    </dialog>
+    <script src="./js/playground.js" type="text/javascript"></script>
+  </body>
+</html>
