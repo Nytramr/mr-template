@@ -1,0 +1,613 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`splitInTokens Empty action 1`] = `
+[
+  {
+    "end": 6,
+    "originalText": "Hello ",
+    "start": 0,
+    "text": "Hello ",
+    "type": "LiteralToken",
+  },
+  {
+    "end": 8,
+    "originalText": "{{}}",
+    "pipeline": undefined,
+    "start": 8,
+    "text": "",
+    "type": "CommandToken",
+  },
+  {
+    "end": 16,
+    "originalText": "world!",
+    "start": 10,
+    "text": "world!",
+    "type": "LiteralToken",
+  },
+]
+`;
+
+exports[`splitInTokens Hello world template 1`] = `
+[
+  {
+    "end": 6,
+    "originalText": "Hello ",
+    "start": 0,
+    "text": "Hello ",
+    "type": "LiteralToken",
+  },
+  {
+    "end": 9,
+    "originalText": "{{.}}",
+    "pipeline": {
+      "commands": [
+        {
+          "end": 9,
+          "start": 8,
+          "text": ".",
+          "type": "value",
+        },
+      ],
+      "end": 9,
+      "innerGraph": undefined,
+      "originalText": ".",
+      "start": 8,
+      "text": ".",
+      "type": "PipelineToken",
+    },
+    "start": 8,
+    "text": ".",
+    "type": "CommandToken",
+  },
+  {
+    "end": 12,
+    "originalText": "!",
+    "start": 11,
+    "text": "!",
+    "type": "LiteralToken",
+  },
+]
+`;
+
+exports[`splitInTokens Template with comments 1`] = `
+[
+  {
+    "end": 25,
+    "originalText": "{{/* This is a comment */}}",
+    "start": 2,
+    "text": "/* This is a comment */",
+    "type": "CommentToken",
+  },
+  {
+    "end": 57,
+    "originalText": "{{/* This is also a comment */ -}}",
+    "start": 29,
+    "text": "/* This is also a comment */",
+    "type": "CommentToken",
+  },
+  {
+    "end": 69,
+    "originalText": "
+Hello 
+",
+    "start": 61,
+    "text": "Hello",
+    "type": "LiteralToken",
+  },
+  {
+    "end": 102,
+    "originalText": "{{- /* This is another comment */}}",
+    "start": 73,
+    "text": "/* This is another comment */",
+    "type": "CommentToken",
+  },
+  {
+    "end": 105,
+    "originalText": "	",
+    "start": 104,
+    "text": "	",
+    "type": "LiteralToken",
+  },
+  {
+    "end": 108,
+    "originalText": "{{.}}",
+    "pipeline": {
+      "commands": [
+        {
+          "end": 108,
+          "start": 107,
+          "text": ".",
+          "type": "value",
+        },
+      ],
+      "end": 108,
+      "innerGraph": undefined,
+      "originalText": ".",
+      "start": 107,
+      "text": ".",
+      "type": "PipelineToken",
+    },
+    "start": 107,
+    "text": ".",
+    "type": "CommandToken",
+  },
+  {
+    "end": 111,
+    "originalText": "
+",
+    "start": 110,
+    "text": "",
+    "type": "LiteralToken",
+  },
+  {
+    "end": 148,
+    "originalText": "{{- /* This is yet another comment */ -}}",
+    "start": 115,
+    "text": "/* This is yet another comment */",
+    "type": "CommentToken",
+  },
+  {
+    "end": 154,
+    "originalText": "
+!",
+    "start": 152,
+    "text": "!",
+    "type": "LiteralToken",
+  },
+]
+`;
+
+exports[`splitInTokens Template with different actions 1`] = `
+[
+  {
+    "end": 25,
+    "originalText": "{{/* This is a comment */ -}}",
+    "start": 2,
+    "text": "/* This is a comment */",
+    "type": "CommentToken",
+  },
+  {
+    "end": 30,
+    "originalText": "
+",
+    "start": 29,
+    "text": "",
+    "type": "LiteralToken",
+  },
+  {
+    "block": undefined,
+    "end": 38,
+    "endToken": undefined,
+    "originalText": "{{define "hello"}}",
+    "pipeline": undefined,
+    "start": 32,
+    "templateToken": {
+      "content": "hello",
+      "end": 46,
+      "originalText": ""hello"",
+      "start": 39,
+      "text": ""hello"",
+      "type": "string",
+    },
+    "text": "define",
+    "type": "RenderToken",
+  },
+  {
+    "end": 63,
+    "originalText": "
+	Print: Hello ",
+    "start": 48,
+    "text": "
+	Print: Hello ",
+    "type": "LiteralToken",
+  },
+  {
+    "end": 72,
+    "originalText": "{{ .name }}",
+    "pipeline": {
+      "commands": [
+        {
+          "end": 71,
+          "start": 66,
+          "text": ".name",
+          "type": "value",
+        },
+      ],
+      "end": 72,
+      "innerGraph": undefined,
+      "originalText": " .name ",
+      "start": 65,
+      "text": " .name ",
+      "type": "PipelineToken",
+    },
+    "start": 65,
+    "text": " .name ",
+    "type": "CommandToken",
+  },
+  {
+    "end": 75,
+    "originalText": "!",
+    "start": 74,
+    "text": "!",
+    "type": "LiteralToken",
+  },
+  {
+    "block": undefined,
+    "end": 80,
+    "endToken": undefined,
+    "originalText": "{{end -}}",
+    "pipeline": undefined,
+    "start": 77,
+    "text": "end",
+    "type": "EndToken",
+  },
+  {
+    "end": 85,
+    "originalText": "
+",
+    "start": 84,
+    "text": "",
+    "type": "LiteralToken",
+  },
+  {
+    "end": 88,
+    "originalText": "{{.}}",
+    "pipeline": {
+      "commands": [
+        {
+          "end": 88,
+          "start": 87,
+          "text": ".",
+          "type": "value",
+        },
+      ],
+      "end": 88,
+      "innerGraph": undefined,
+      "originalText": ".",
+      "start": 87,
+      "text": ".",
+      "type": "PipelineToken",
+    },
+    "start": 87,
+    "text": ".",
+    "type": "CommandToken",
+  },
+  {
+    "end": 91,
+    "originalText": "
+",
+    "start": 90,
+    "text": "
+",
+    "type": "LiteralToken",
+  },
+  {
+    "block": undefined,
+    "end": 98,
+    "endToken": undefined,
+    "originalText": "{{range .range}}",
+    "pipeline": {
+      "commands": [
+        {
+          "end": 105,
+          "start": 99,
+          "text": ".range",
+          "type": "value",
+        },
+      ],
+      "end": 105,
+      "innerGraph": undefined,
+      "originalText": ".range",
+      "start": 99,
+      "text": ".range",
+      "type": "PipelineToken",
+    },
+    "start": 93,
+    "text": "range",
+    "type": "VerbActionToken",
+  },
+  {
+    "end": 112,
+    "originalText": "Loop ",
+    "start": 107,
+    "text": "Loop ",
+    "type": "LiteralToken",
+  },
+  {
+    "end": 115,
+    "originalText": "{{.}}",
+    "pipeline": {
+      "commands": [
+        {
+          "end": 115,
+          "start": 114,
+          "text": ".",
+          "type": "value",
+        },
+      ],
+      "end": 115,
+      "innerGraph": undefined,
+      "originalText": ".",
+      "start": 114,
+      "text": ".",
+      "type": "PipelineToken",
+    },
+    "start": 114,
+    "text": ".",
+    "type": "CommandToken",
+  },
+  {
+    "end": 118,
+    "originalText": "
+",
+    "start": 117,
+    "text": "
+",
+    "type": "LiteralToken",
+  },
+  {
+    "block": undefined,
+    "end": 122,
+    "endToken": undefined,
+    "originalText": "{{if eq . 3}}",
+    "pipeline": {
+      "commands": [
+        {
+          "end": 125,
+          "start": 123,
+          "text": "eq",
+          "type": "unknown",
+        },
+        {
+          "end": 127,
+          "start": 126,
+          "text": ".",
+          "type": "value",
+        },
+        {
+          "end": 129,
+          "start": 128,
+          "text": "3",
+          "type": "number",
+        },
+      ],
+      "end": 129,
+      "innerGraph": undefined,
+      "originalText": "eq . 3",
+      "start": 123,
+      "text": "eq . 3",
+      "type": "PipelineToken",
+    },
+    "start": 120,
+    "text": "if",
+    "type": "VerbActionToken",
+  },
+  {
+    "block": undefined,
+    "end": 138,
+    "endToken": undefined,
+    "originalText": "{{break}}",
+    "pipeline": undefined,
+    "start": 133,
+    "text": "break",
+    "type": "ActionToken",
+  },
+  {
+    "block": undefined,
+    "end": 145,
+    "endToken": undefined,
+    "originalText": "{{end}}",
+    "pipeline": undefined,
+    "start": 142,
+    "text": "end",
+    "type": "EndToken",
+  },
+  {
+    "block": undefined,
+    "end": 152,
+    "endToken": undefined,
+    "originalText": "{{end}}",
+    "pipeline": undefined,
+    "start": 149,
+    "text": "end",
+    "type": "EndToken",
+  },
+  {
+    "end": 155,
+    "originalText": "
+",
+    "start": 154,
+    "text": "",
+    "type": "LiteralToken",
+  },
+  {
+    "block": undefined,
+    "end": 167,
+    "endToken": undefined,
+    "originalText": "{{- template "hello" .person }}",
+    "pipeline": {
+      "commands": [
+        {
+          "end": 183,
+          "start": 176,
+          "text": ".person",
+          "type": "value",
+        },
+      ],
+      "end": 183,
+      "innerGraph": undefined,
+      "originalText": ".person",
+      "start": 176,
+      "text": ".person",
+      "type": "PipelineToken",
+    },
+    "start": 159,
+    "templateToken": {
+      "content": "hello",
+      "end": 175,
+      "originalText": ""hello"",
+      "start": 168,
+      "text": ""hello"",
+      "type": "string",
+    },
+    "text": "template",
+    "type": "RenderToken",
+  },
+]
+`;
+
+exports[`splitInTokens Template with unclosed actions 1`] = `
+[
+  {
+    "block": undefined,
+    "end": 4,
+    "endToken": undefined,
+    "originalText": "{{if .}}",
+    "pipeline": {
+      "commands": [
+        {
+          "end": 6,
+          "start": 5,
+          "text": ".",
+          "type": "value",
+        },
+      ],
+      "end": 6,
+      "innerGraph": undefined,
+      "originalText": ".",
+      "start": 5,
+      "text": ".",
+      "type": "PipelineToken",
+    },
+    "start": 2,
+    "text": "if",
+    "type": "VerbActionToken",
+  },
+  {
+    "end": 23,
+    "originalText": "
+{{Dot is true
+",
+    "start": 8,
+    "text": "
+{{Dot is true
+",
+    "type": "LiteralToken",
+  },
+  {
+    "block": undefined,
+    "end": 29,
+    "endToken": undefined,
+    "originalText": "{{else}}",
+    "pipeline": undefined,
+    "start": 25,
+    "text": "else",
+    "type": "ActionToken",
+  },
+  {
+    "end": 48,
+    "originalText": "
+line1 {{"x" "y"
+",
+    "start": 31,
+    "text": "
+line1 {{"x" "y"
+",
+    "type": "LiteralToken",
+  },
+  {
+    "block": undefined,
+    "end": 53,
+    "endToken": undefined,
+    "originalText": "{{end}}",
+    "pipeline": undefined,
+    "start": 50,
+    "text": "end",
+    "type": "EndToken",
+  },
+]
+`;
+
+exports[`splitInTokens Text and spaces template 1`] = `
+[
+  {
+    "end": 4,
+    "originalText": "{{23 -}}",
+    "pipeline": {
+      "commands": [
+        {
+          "end": 4,
+          "start": 2,
+          "text": "23",
+          "type": "number",
+        },
+      ],
+      "end": 4,
+      "innerGraph": undefined,
+      "originalText": "23",
+      "start": 2,
+      "text": "23",
+      "type": "PipelineToken",
+    },
+    "start": 2,
+    "text": "23",
+    "type": "CommandToken",
+  },
+  {
+    "end": 11,
+    "originalText": " < ",
+    "start": 8,
+    "text": "<",
+    "type": "LiteralToken",
+  },
+  {
+    "end": 17,
+    "originalText": "{{- 45}}",
+    "pipeline": {
+      "commands": [
+        {
+          "end": 17,
+          "start": 15,
+          "text": "45",
+          "type": "number",
+        },
+      ],
+      "end": 17,
+      "innerGraph": undefined,
+      "originalText": "45",
+      "start": 15,
+      "text": "45",
+      "type": "PipelineToken",
+    },
+    "start": 15,
+    "text": "45",
+    "type": "CommandToken",
+  },
+]
+`;
+
+exports[`splitInTokens no actions template 1`] = `
+[
+  {
+    "end": 105,
+    "originalText": "This is a template
+With no Actions
+Some "strings"
+
+And some scaped Actions
+
+{\\{ this is not an action }}
+",
+    "start": 0,
+    "text": "This is a template
+With no Actions
+Some "strings"
+
+And some scaped Actions
+
+{\\{ this is not an action }}
+",
+    "type": "LiteralToken",
+  },
+]
+`;

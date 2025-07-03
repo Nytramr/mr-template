@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Simple templates no actions template 1`] = `
+"This is a template
+With no Actions
+Some "strings"
+
+And some scaped Actions
+
+{\\{ this is not an action }}
+"
+`;

@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Template with Range Loop With variables declared inline element only 1`] = `
+"Beginning of the file
+Loop 1,Loop 2,Loop 3,Loop 4,Loop 5,
+End of the file
+"
+`;
+
+exports[`Template with Range Loop With variables declared inline element only 2`] = `
+"Beginning of the file
+Loop a,Loop b,Loop c,Loop d,Loop e,Loop f,
+End of the file
+"
+`;
+
+exports[`Template with Range Loop With variables declared inline key and element 1`] = `
+"Beginning of the file
+Loop 0: a,Loop 1: b,Loop 2: c,Loop 3: d,Loop 4: e,Loop 5: f,
+End of the file
+"
+`;
+
+exports[`Template with Range Loop With variables declared inline key and element 2`] = `
+"Beginning of the file
+Loop a: 1,Loop b: 2,Loop c: 3,Loop d: 4,Loop e: 5,Loop f: 6,
+End of the file
+"
+`;
+
+exports[`Template with Range Loop With variables previously declared element only 1`] = `
+"Beginning of the file
+Loop 1,Loop 2,Loop 3,Loop 4,
+End of the file
+"
+`;
+
+exports[`Template with Range Loop With variables previously declared element only 2`] = `
+"Beginning of the file
+Loop a,Loop b,Loop c,Loop d,Loop e,
+End of the file
+"
+`;
+
+exports[`Template with Range Loop With variables previously declared key and element 1`] = `
+"Beginning of the file
+Loop 0: A,Loop 1: B,Loop 2: C,Loop 3: D,
+End of the file
+"
+`;
+
+exports[`Template with Range Loop With variables previously declared key and element 2`] = `
+"Beginning of the file
+Loop a: X,Loop b: Y,Loop c: Z,
+End of the file
+"
+`;
+
+exports[`Template with Range Loop nested range 1`] = `
+"Beginning of the file
+  Loop: 1, 2, 3,
+  End loop
+
+  Loop: 4,
+  End loop
+
+  Loop: 5, 6,
+  End loop
+End of the file"
+`;
+
+exports[`Template with Range Loop nested range 2`] = `
+"Beginning of the file
+  Loop: a, b, c,
+  End loop
+
+  Loop: d, e,
+  End loop
+
+  Loop: f,
+  End loop
+
+  Loop: g,
+  End loop
+End of the file"
+`;
+
+exports[`Template with Range Loop range with a constant 1`] = `
+"Beginning of the file
+s, t, r,  , r, a, n, g, e,  , r, e, n, d, e, r, 
+End of the file
+"
+`;
+
+exports[`Template with Range Loop simple range 1`] = `
+"Beginning of the file
+Loop 1, Loop 2, Loop 3, Loop 4, Loop 5, 
+End of the file
+"
+`;
+
+exports[`Template with Range Loop simple range 2`] = `
+"Beginning of the file
+Loop 1, Loop 2, Loop 3, Loop 4, Loop 5, Loop 6, 
+End of the file
+"
+`;
+
+exports[`Template with Range Loop simple range 3`] = `
+"Beginning of the file
+Loop a, Loop b, Loop c, Loop d, Loop e, Loop f, 
+End of the file
+"
+`;
+
+exports[`Template with Range Loop with "break" 1`] = `
+"Beginning of the file
+Loop 0
+Loop 1
+Loop 2
+Loop 3
+End of the file
+"
+`;
+
+exports[`Template with Range Loop with "break" 2`] = `
+"Beginning of the file
+Loop 1
+Loop 5
+Loop a
+Loop 30
+Loop 3
+Loop b
+Loop 3
+End of the file
+"
+`;
+
+exports[`Template with Range Loop with "continue" 1`] = `
+"Beginning of the file
+Loop 0
+Loop 1
+Loop 2
+Loop 3
+"
+`;
+
+exports[`Template with Range Loop with "continue" 2`] = `
+"Beginning of the file
+Loop 1
+Loop a
+Loop b
+Loop 3
+Loop c
+"
+`;
+
+exports[`Template with Range Loop with "else" fallback 1`] = `
+"Beginning of the file
+Loop 0
+Loop 1
+Loop 2
+Loop 3
+Loop 4
+
+End of the file
+"
+`;
+
+exports[`Template with Range Loop with "else" fallback 2`] = `
+"Beginning of the file
+
+The range is empty
+
+End of the file
+"
+`;

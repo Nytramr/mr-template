@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Template with scope-selection scope selection with "else" and "else with" fallback 1`] = `
+"Beginning of the file
+Global value is 100
+
+The scope1's value is 200
+
+End of the file
+"
+`;
+
+exports[`Template with scope-selection scope selection with "else" and "else with" fallback 2`] = `
+"Beginning of the file
+Global value is 100
+
+The scope'2 value is 300
+
+End of the file
+"
+`;
+
+exports[`Template with scope-selection scope selection with "else" and "else with" fallback 3`] = `
+"Beginning of the file
+Global value is 100
+
+Every scope is undefined
+
+End of the file
+"
+`;
+
+exports[`Template with scope-selection scope selection with "else" fallback 1`] = `
+"Beginning of the file
+Global value is 100
+
+The scope's value is 200
+
+End of the file
+"
+`;
+
+exports[`Template with scope-selection scope selection with "else" fallback 2`] = `
+"Beginning of the file
+Global value is 100
+
+The scope is undefined
+
+End of the file
+"
+`;
+
+exports[`Template with scope-selection scope selection with nested scopes 1`] = `
+"Beginning of the file
+Global value is 100
+
+The scope1's value is 200
+
+The scope1_1's value is 250
+
+End of the file"
+`;
+
+exports[`Template with scope-selection scope selection with nested scopes 2`] = `
+"Beginning of the file
+Global value is 100
+
+The scope1's value is 200
+
+The scope1_1 is undefined
+
+End of the file"
+`;
+
+exports[`Template with scope-selection scope selection with nested scopes 3`] = `
+"Beginning of the file
+Global value is 100
+
+The scope'2 value is 300
+
+End of the file"
+`;
+
+exports[`Template with scope-selection scope selection with nested scopes 4`] = `
+"Beginning of the file
+Global value is 100
+
+Every scope is undefined
+
+End of the file"
+`;
+
+exports[`Template with scope-selection simple scope selection 1`] = `
+"Beginning of the file
+Global value is 100
+The scope's value is 200
+End of the file
+"
+`;
+
+exports[`Template with scope-selection simple scope selection 2`] = `
+"Beginning of the file
+Global value is a
+The scope's value is b
+End of the file
+"
+`;
