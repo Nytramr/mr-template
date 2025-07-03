@@ -12,6 +12,7 @@
   "scripts": {
     "build": "npm run clean && npx rollup -c rollup.config.js",
     "build:dev": "npm run clean && npx rollup -c rollup.config.js --config_build_env dev",
+    "build:pages": "npx rollup -c rollup.pages.config.js",
     "clean": "rm -rf ./dist",
     "publish:local": "npm run build:dev && npm pack --pack-destination ./packs",
     "start": "npx http-server --cors -a localhost -p 5500 -S -C ./cert/CA/localhost/localhost.crt -K ./cert/CA/localhost/localhost.decrypted.key ./gh-pages",
