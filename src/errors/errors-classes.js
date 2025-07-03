@@ -11,4 +11,4 @@ export class MrError extends Error {
   }
 }
 export class MrParseError extends MrError {}
-export class MrRenderError extends MrError {}
+export class MrTemplateError extends MrError {}

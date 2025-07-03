@@ -1,4 +1,4 @@
-const { Template } = mrRender;
+const { Template } = mrTemplate;
 
 let templateEditor = document.getElementById('template-code');
 let templateEditorErrors = document.getElementById('template-errors');

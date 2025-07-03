@@ -1,4 +1,4 @@
-import { MrRenderError } from '../errors';
+import { MrTemplateError } from '../errors';
 import { BaseNode } from './base-node';
 
 export class AssignNode extends BaseNode {
@@ -74,7 +74,7 @@ export class AssignNode extends BaseNode {
       scopes = this.#findScopes(runningScopes);
       scopes.forEach((scope, i) => {
         if (!scope) {
-          throw new MrRenderError(`undefined variable: ${this.#varNames[i]}`);
+          throw new MrTemplateError(`undefined variable: ${this.#varNames[i]}`);
         }
       });
     }
