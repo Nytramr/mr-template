@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sub Templates block action with input data 1`] = `"Print: Hello Jenny!"`;
+
+exports[`Sub Templates block action without input data 1`] = `"Print: Hello world!"`;
+
+exports[`Sub Templates define and template actions simple define 1`] = `""`;
+
+exports[`Sub Templates define and template actions simple define and template 1`] = `"Print: Hello world!"`;
+
+exports[`Sub Templates define and template actions template action with input data 1`] = `"Print: Hello John!"`;

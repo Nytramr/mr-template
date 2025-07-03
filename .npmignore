@@ -1,7 +1,6 @@
 .github/
 .vscode/
-docs/
-playground/
+gh-pages/
 private/
 src/
 .babelrc
