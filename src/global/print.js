@@ -1,5 +1,5 @@
 import { STRING_TYPE } from '../constants';
-import { MrRenderError } from '../errors';
+import { MrTemplateError } from '../errors';
 import pipedNodeFactory from '../utils/node-utils';
 
 function joinValues(...values) {
@@ -35,7 +35,7 @@ function replaceVerbs(format, ...values) {
     if (verb) {
       return verb(values[i++]);
     }
-    throw new MrRenderError(`Unknown verb: ${match}`);
+    throw new MrTemplateError(`Unknown verb: ${match}`);
   });
 }
 
