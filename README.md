@@ -69,7 +69,7 @@ npm run build
 npm run start
 ```
 
-Then open https://localhost:5500 in your browser.
+Then open https://localhost:5500/playground in your browser.
 
 ## Development
 

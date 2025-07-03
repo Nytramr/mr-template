@@ -144,7 +144,7 @@ document.getElementById('load-template').addEventListener('click', async () => {
   templates.forEach((tpl, idx) => {
     const li = document.createElement('li');
     const link = document.createElement('a');
-    link.href = `/?id=${tpl.id}`;
+    link.href = `./?id=${tpl.id}`;
     link.textContent = tpl.name || `Template ${idx + 1}`;
     link.onclick = () => {
       dialog.close();
